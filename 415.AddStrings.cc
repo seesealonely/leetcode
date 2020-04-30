@@ -1,0 +1,21 @@
+/*
+Given two non-negative integers num1 and num2 represented as string, return the sum of num1 and num2.
+
+Note:
+
+    The length of both num1 and num2 is < 5100.
+    Both num1 and num2 contains only digits 0-9.
+    Both num1 and num2 does not contain any leading zero.
+    You must not use any built-in BigInteger library or convert the inputs to integer directly.
+
+*/
+
+#include"415.AddStrings.h"
+
+int main()
+{
+	string s1("456"),s2("456");
+	Solution s;
+	cout<<s.addStrings(s1,s2)<<endl;
+	cout<<s.addStrings("9","99")<<endl;
+}
