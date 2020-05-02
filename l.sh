@@ -4,6 +4,7 @@ clear
 echo "input title"
 read s
 quesionname="$(echo -e "${s}" | tr -d '[ ]')"
+urltail="$(echo -e "${s#*.}" | tr 'A-Z' 'a-z' | tr ' ' '-')"
 echo $quesionname.h
 touch $quesionname.h 
 echo $quesionname.cc
@@ -52,3 +53,6 @@ done
 
 echo -e $quesionname >> makefile
 echo "end input"
+
+url="https://leetcode.com/problems/"$urltail'/'
+echo -e [$quesionname]("$url")>>README.md
