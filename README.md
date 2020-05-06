@@ -8,3 +8,5 @@ leetcode
 [1402.ReducingDishes](https://leetcode.com/problems/reducing-dishes/)
 [368.LargestDivisibleSubset](https://leetcode.com/problems/largest-divisible-subset/)
 
+[1218.LongestArithmeticSubsequenceofGivenDifference](https://leetcode.com/problems/longest-arithmetic-subsequence-of-given-difference/)
+
