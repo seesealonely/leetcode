@@ -28,5 +28,8 @@ int main()
 	v.clear();
 	v.push_back(1);	v.push_back(2);	v.push_back(4);	v.push_back(8);
 	show(s.largestDivisibleSubset(v));
+	v.clear();
+	v.push_back(1);
+	show(s.largestDivisibleSubset(v));
 	return 0;
 }

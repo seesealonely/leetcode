@@ -6,3 +6,5 @@ leetcode
 [1415.Thek-thLexicographicalStringofAllHappyStringsofLengthn](https://leetcode.com/problems/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/)
 [1399.CountLargestGroup](https://leetcode.com/problems/count-largest-group/)
 [1402.ReducingDishes](https://leetcode.com/problems/reducing-dishes/)
+[368.LargestDivisibleSubset](https://leetcode.com/problems/largest-divisible-subset/)
+

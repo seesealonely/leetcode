@@ -15,34 +15,37 @@ Example 2:
 Input: [1,2,4,8]
 Output: [1,2,4,8]
 
-*/
+ */
 
 #include"head.h"
 
 class Solution {
 	public:
 		vector<int> largestDivisibleSubset(vector<int>& nums) {
-			return dp(nums);
-		}
-		vector<int> dp(vector<int>& nums) {
-			vector<int> dp(nums.size(),0),index,res;
-			int posi=-1;
-			for(int i=1;i<nums.size();i++)
+			sort(nums.begin(),nums.end());
+			vector<int> pre(nums.size(),-1),count(nums.size(),1),res;
+			int len=0,idx=-1;
+			for(int i=0;i<nums.size();i++)
 			{
-				posi=-1;
 				for(int j=i-1;j>=0;j--)
-					if(nums[i]%nums[j]==0||nums[j]%nums[i]==0)
+				{
+					if(nums[i]%nums[j]==0&&count[j]+1>count[i])
 					{
-						if(dp[i]<=dp[j])
-						{
-							dp[i]=dp[j]+1;	
-							if(posi<j) posi=j;
-						}
+						count[i]=count[j]+1;
+						pre[i]=j;
 					}
-				index.push_back(posi);		
+				}       
+				if(count[i]>len)
+				{
+					len=count[i];
+					idx=i;
+				}
 			}
-			for(vector<int>::iterator it=nums.begin();it!=nums.end();it++)
-				res.push_back(nums[*it]);
+			while(idx!=-1)
+			{
+				res.push_back(nums[idx]);
+				idx=pre[idx];
+			}
 			return res;
 		}
 };
