@@ -10,3 +10,5 @@ leetcode
 
 [1218.LongestArithmeticSubsequenceofGivenDifference](https://leetcode.com/problems/longest-arithmetic-subsequence-of-given-difference/)
 
+[1417.ReformatTheString](https://leetcode.com/problems/reformat-the-string/)
+
