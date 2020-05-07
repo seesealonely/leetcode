@@ -24,3 +24,5 @@ leetcode
 
 [1408.StringMatchinginanArray](https://leetcode.com/problems/string-matching-in-an-array/)
 
+[1156.SwapForLongestRepeatedCharacterSubstring](https://leetcode.com/problems/swap-for-longest-repeated-character-substring/)
+
