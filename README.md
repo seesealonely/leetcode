@@ -18,3 +18,9 @@ leetcode
 
 [1277.CountSquareSubmatriceswithAllOnes](https://leetcode.com/problems/count-square-submatrices-with-all-ones/)
 
+[808.SoupServings](https://leetcode.com/problems/soup-servings/)
+
+[1235.MaximumProfitinJobScheduling](https://leetcode.com/problems/maximum-profit-in-job-scheduling/)
+
+[1408.StringMatchinginanArray](https://leetcode.com/problems/string-matching-in-an-array/)
+
