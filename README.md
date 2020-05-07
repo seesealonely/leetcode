@@ -12,3 +12,7 @@ leetcode
 
 [1417.ReformatTheString](https://leetcode.com/problems/reformat-the-string/)
 
+[151.ReverseWordsinaString](https://leetcode.com/problems/reverse-words-in-a-string/)
+
+[1414.FindtheMinimumNumberofFibonacciNumbersWhoseSumIsK](https://leetcode.com/problems/find-the-minimum-number-of-fibonacci-numbers-whose-sum-is-k/)
+
