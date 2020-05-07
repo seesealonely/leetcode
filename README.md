@@ -16,3 +16,5 @@ leetcode
 
 [1414.FindtheMinimumNumberofFibonacciNumbersWhoseSumIsK](https://leetcode.com/problems/find-the-minimum-number-of-fibonacci-numbers-whose-sum-is-k/)
 
+[1277.CountSquareSubmatriceswithAllOnes](https://leetcode.com/problems/count-square-submatrices-with-all-ones/)
+
