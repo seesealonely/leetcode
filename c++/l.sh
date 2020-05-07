@@ -37,7 +37,7 @@ cinclude="#include\"head.h\""
 
 num=1
 while read line;do
-	if [ $num -eq 3 ] ;then 
+	if [ $num -eq 2 ] ;then 
 		funcname=${line#* }
 		funcname=${funcname%(*}
 	fi
@@ -65,4 +65,4 @@ echo -e $quesionname >> makefile
 echo "end input"
 
 url="https://leetcode.com/problems/"$urltail'/'
-echo -e "[$quesionname]($url)">>README.md
+echo -e "[$quesionname]($url)\n">>../README.md
