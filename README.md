@@ -30,3 +30,5 @@ leetcode
 
 [1365.HowManyNumbersAreSmallerThantheCurrentNumber](https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/)
 
+[315.CountofSmallerNumbersAfterSelf](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)
+
