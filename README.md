@@ -26,3 +26,5 @@ leetcode
 
 [1156.SwapForLongestRepeatedCharacterSubstring](https://leetcode.com/problems/swap-for-longest-repeated-character-substring/)
 
+[1399.CountLargestGroup](https://leetcode.com/problems/count-largest-group/)
+
