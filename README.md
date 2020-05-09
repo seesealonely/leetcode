@@ -28,3 +28,5 @@ leetcode
 
 [1399.CountLargestGroup](https://leetcode.com/problems/count-largest-group/)
 
+[1365.HowManyNumbersAreSmallerThantheCurrentNumber](https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/)
+
