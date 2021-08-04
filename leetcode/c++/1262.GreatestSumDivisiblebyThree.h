@@ -43,6 +43,7 @@ class Solution {
 					dp[mod]=max(dp[mod],tmp[j]+nums[i]);
 				}
 			}
+			
 			return dp[0];
 		}
 };

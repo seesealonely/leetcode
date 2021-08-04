@@ -39,5 +39,6 @@ int main()
  	 cout<<s.maxSumDivThree(v)<<endl;
 	 v.clear();v={1,2,3,4,4};
  	 cout<<s.maxSumDivThree(v)<<endl;
+
  	 return 0;
  }
