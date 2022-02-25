@@ -46,7 +46,7 @@ class Solution {
         for(int i=0;i<n;i++)
             presum[i+1]=presum[i]+nums[i];
 
-        int res=0;
+        long long res=0,mod=1e9+7;
         for(int i=1;i<n-1;i++)
         {
                 int second=lower_bound(presum.begin()+i,presum.end(),2*presum[i])-presum.begin();
@@ -56,7 +56,7 @@ class Solution {
                     continue;
                 res+=third-second;
         }
-        return res;
+        return res%mod;
         }
 };
 int main() 
