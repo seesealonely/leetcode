@@ -47,14 +47,15 @@ class Solution {
                 presum[i+1]=presum[i]+nums[i];
 
             long long  res=0,mod=1e9+7;
-            for(int i=1;i<n-1;i++)
+            for(int i=1,j=1,k=1;i<n+1;i++)
             {
-                int second=lower_bound(presum.begin()+i+1,presum.end(),2*presum[i])-presum.begin();
-                int third=upper_bound(presum.begin()+i+1,presum.end()-1,presum[i]+(presum.back()-presum[i])/2)-presum.begin();
+                j=max(j,i+1);
+                while(j<n&&2*presum[i]>presum[j]) j++;
 
-                if(second>third)
-                    continue;
-                res+=third-second;
+                k=max(j,k);
+                while(k<n&&2*presum[k]<=presum[i]+presum.back()) ++k;
+
+                res+=(k-j);
             }
             return res%mod;
 
@@ -63,6 +64,11 @@ class Solution {
 int main() 
 {
     Solution s;
-    s.waysToSplit();
+    vector<int> v={1,1,1};
+    cout<<s.waysToSplit(v)<<endl;
+    v.clear();v={1,2,2,2,5,0};
+    cout<<s.waysToSplit(v)<<endl;
+    v.clear();v={3,2,1};
+    cout<<s.waysToSplit(v)<<endl;
     return 0;
 }
