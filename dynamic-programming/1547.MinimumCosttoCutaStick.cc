@@ -43,24 +43,46 @@ All the integers in cuts array are distinct.
 class Solution {
     public:
         int minCost(int n, vector<int>& cuts) {
-        return minCost0(n,cuts);
+            return minCost1(n,cuts);
+         //   return minCost0(n,cuts);
         }
+        /*
         int minCost0(int n, vector<int>& cuts) {
-        sort(cuts.begin(),cuts.end());
-        cuts.insert(cuts.begin(),0);
-        cuts.push_back(n);
-        vector<vector<int>> dp(cuts.size(),vector<int>(cuts.size(),INT_MAX));
-        return dfs(dp,cuts,0,cuts.size()-1);
+            sort(cuts.begin(),cuts.end());
+            cuts.insert(cuts.begin(),0);
+            cuts.push_back(n);
+            vector<vector<int>> dp(cuts.size(),vector<int>(cuts.size(),INT_MAX));
+            return dfs(dp,cuts,0,cuts.size()-1);
         }
         int dfs(vector<vector<int>> &dp,vector<int> &cuts,int l,int r)
         {
-           if(dp[l][r]!=INT_MAX)
-               return dp[l][r];
-           if(l==r||l+1==r)
-               dp[l][r]=0;
-           for(int i=l+1;i<r;i++)
-               dp[l][r]=min(dp[l][r],dfs(dp,cuts,l,i)+dfs(dp,cuts,i,r)+cuts[r]-cuts[l]);
-           return dp[l][r];
+            if(dp[l][r]!=INT_MAX)
+                return dp[l][r];
+            if(l==r||l+1==r)
+                dp[l][r]=0;
+            for(int i=l+1;i<r;i++)
+                dp[l][r]=min(dp[l][r],dfs(dp,cuts,l,i)+dfs(dp,cuts,i,r)+cuts[r]-cuts[l]);
+            return dp[l][r];
+        }
+        */
+        int minCost1(int n, vector<int>& cuts) {
+            sort(cuts.begin(),cuts.end());
+            cuts.insert(cuts.begin(),0);
+            cuts.push_back(n);
+            const int c=cuts.size();
+            vector<vector<int>> dp(c,vector<int>(c,INT_MAX));
+            for(int i=0;i+1<c;i++)
+                dp[i][i+1]=0;
+
+            for(int len=2;len<c;len++)
+                for(int i=0;i+len<c;i++)
+                {
+                    int j=i+len;
+                    for(int k=i+1;k<j;k++)
+                        dp[i][j]=min(dp[i][j],dp[i][k]+dp[k][j]+cuts[j]-cuts[i]);
+                }
+
+            return dp[0][c-1];
         }
 };
 
