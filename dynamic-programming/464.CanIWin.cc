@@ -1,0 +1,88 @@
+/*
+   In the "100 game" two players take turns adding, to a running total, any integer from 1 to 10. The player who first causes the running total to reach or exceed 100 wins.
+
+   What if we change the game so that players cannot re-use integers?
+
+   For example, two players might take turns drawing from a common pool of numbers from 1 to 15 without replacement until they reach a total >= 100.
+
+   Given two integers maxChoosableInteger and desiredTotal, return true if the first player to move can force a win, otherwise, return false. Assume both players play optimally.
+
+
+
+   Example 1:
+
+Input: maxChoosableInteger = 10, desiredTotal = 11
+Output: false
+Explanation:
+No matter which integer the first player choose, the first player will lose.
+The first player can choose an integer from 1 up to 10.
+If the first player choose 1, the second player can only choose integers from 2 up to 10.
+The second player will win by choosing 10 and get a total = 11, which is >= desiredTotal.
+Same with other integers chosen by the first player, the second player will always win.
+
+Example 2:
+
+Input: maxChoosableInteger = 10, desiredTotal = 0
+Output: true
+
+Example 3:
+
+Input: maxChoosableInteger = 10, desiredTotal = 1
+Output: true
+
+
+
+Constraints:
+
+1 <= maxChoosableInteger <= 20
+0 <= desiredTotal <= 300
+
+*/
+
+
+#include"head.h"
+class Solution {
+    public:
+        bool canIWin(int maxChoosableInteger, int desiredTotal) {
+//        vector<vector<int>> dp(1<<20,vector<int>(2,0));
+        vector<int> dp(1<<20,0);
+        if((1+maxChoosableInteger)*maxChoosableInteger<desiredTotal) return false;
+        if(maxChoosableInteger>=desiredTotal) return true;
+        //return dfs(dp,0,0,0,maxChoosableInteger,desiredTotal)==1;
+        return dfs1(dp,0,0,maxChoosableInteger,desiredTotal)==1;
+        }
+        int dfs(vector<vector<int>> &dp,int state,int tot,int k,int m,int d)
+        {
+            if(state==((1<<m)-1)&&tot<d) return -1;
+            if(dp[state][k%2]) return dp[state][k%2];
+            int cur=k%2==0?1:-1;
+            for(int i=0;i<m;i++)
+            {
+                if(((state>>i)&1)==1) continue;
+                if(tot+i+1>=d) return dp[state][k%2]=cur;
+                if(dfs(dp,state|1<<i,tot+i+1,k+1,m,d)==cur) return dp[state][k%2]=cur;
+            }
+            return dp[state][k%2]=-cur;
+        }
+        int dfs1(vector<int> &dp,int state,int tot,int m,int d)
+        {
+            if(dp[state]) return dp[state];
+            for(int i=0;i<m;i++)
+            {
+                if(((state>>i)&1)==1) continue;
+                if(tot+i+1>=d) return dp[state]=1;
+                if(dfs1(dp,state|(1<<i),tot+i+1,m,d)==-1) return dp[state]=1;
+            }
+            return dp[state]=-1;
+        }
+};
+
+
+int main() 
+{
+    Solution s;
+    cout<<s.canIWin(10,11)<<endl;
+    cout<<s.canIWin(10,0)<<endl;
+    cout<<s.canIWin(10,1)<<endl;
+    return 0;
+}
