@@ -45,18 +45,26 @@ moveCost[i].length == n
 class Solution {
     public:
         int minPathCost(vector<vector<int>>& grid, vector<vector<int>>& moveCost) {
- /*           const int r=grid.size(),c=grid[0].size();
-            vector<vector<int>> dp(r,0);
+            const int r=grid.size(),c=grid[0].size();
+            vector<int> f(c,0);
 
             for(int i=0;i<c;i++)
-                dp[i]=grid[0][i];
+                f[i]=grid[0][i];
 
-            for(int i=0;i<r;i++)
+            for(int i=1;i<r;i++)
             {
+                vector<int> g(c,INT_MAX);
                 for(int j=0;j<c;j++)
-                    for(int k=0;
+                    for(int k=0;k<c;k++)
+                        g[j]=min(g[j],f[k]+grid[i][j]+moveCost[grid[i-1][k]][j]);
+
+                f=g;
             }
-            */
+
+            int res=INT_MAX;
+            for(int i=0;i<c;i++)
+                res=min(res,f[i]);
+            return res;
         }
 };
 
@@ -64,6 +72,10 @@ class Solution {
 int main() 
 {
     Solution s;
-//    s.minPathCost();
+    vector<vector<int>> g={{5,3},{4,0},{2,1}},m={{9,8},{1,5},{10,12},{18,6},{2,4},{14,3}};
+    cout<<s.minPathCost(g,m)<<endl;
+    g.clear();g={{5,1,2},{4,0,3}};
+    m.clear();m={{12,10,15},{20,23,8},{21,7,1},{8,1,13},{9,10,25},{5,3,2}};
+    cout<<s.minPathCost(g,m)<<endl;
     return 0;
 }
