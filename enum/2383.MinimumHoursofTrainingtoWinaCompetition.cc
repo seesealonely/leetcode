@@ -54,7 +54,7 @@ class Solution {
             int res=0;
 
             initialEnergy-=accumulate(energy.begin(),energy.end(),0);
-            if(initialEnergy<0)
+            if(initialEnergy<=0)
                 res+=abs(initialEnergy)+1;
 
             for(int i=0;i<experience.size();i++)
@@ -62,6 +62,7 @@ class Solution {
                 if(initialExperience<=experience[i])
                 {
                     res+=experience[i]-initialExperience+1;
+                    initialExperience=experience[i]+1;
                 }
                 initialExperience+=experience[i];
             }
