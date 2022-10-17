@@ -54,3 +54,4 @@ echo -e $main>> $quesionname.cc
 
 echo ${quesionname} >>makefile
 echo "end all input operation"
+
