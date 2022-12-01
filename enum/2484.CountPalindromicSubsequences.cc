@@ -41,7 +41,7 @@ s consists of digits.
 #include"head.h"
 class Solution {
     public:
-        static const int N=10001;
+        static const int N=10002;
         int countPalindromes(string s) {
         typedef long long ll;
         const int n=s.size(),mod=1e9+7;
