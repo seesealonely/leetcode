@@ -1,4 +1,4 @@
-ex:lib.a 798.SmallestRotationwithHighestScore 1072.FlipColumnsForMaximumNumberofEqualRows 1109.CorporateFlightBookings 1523.CountOddNumbersinanIntervalRange 1590.MakeSumDivisiblebyP 1854.MaximumPopulationYear 2017.GridGame 2055.PlatesBetweenCandles  2132.StampingtheGrid 2245.MaximumTrailingZerosinaCorneredPath  2256.MinimumAverageDifference 2270.NumberofWaystoSplitArray 2271.MaximumWhiteTilesCoveredbyaCarpet 2321.MaximumScoreOfSplicedArray 2348.NumberofZero-FilledSubarrays 2406.DivideIntervalsIntoMinimumNumberofGroups 2488.CountSubarraysWithMedianK
+ex:lib.a 798.SmallestRotationwithHighestScore 1072.FlipColumnsForMaximumNumberofEqualRows 1109.CorporateFlightBookings 1523.CountOddNumbersinanIntervalRange 1590.MakeSumDivisiblebyP 2017.GridGame 2270.NumberofWaystoSplitArray 2321.MaximumScoreOfSplicedArray 2348.NumberofZero-FilledSubarrays 2406.DivideIntervalsIntoMinimumNumberofGroups 2488.CountSubarraysWithMedianK 2574.LeftandRightSumDifferences
 lib.a:head.o
 	ar -crv $@ $<
 head.o:head.cc
@@ -36,5 +36,7 @@ head.o:head.cc
 	g++ -Wall -g $^ -o $@
 2488.CountSubarraysWithMedianK:2488.CountSubarraysWithMedianK.cc
 	g++ -Wall -g $^ -o $@
+2574.LeftandRightSumDifferences:2574.LeftandRightSumDifferences.cc lib.a
+	g++ -Wall -g $^ -o $@
 clean:
-	rm -f 798.SmallestRotationwithHighestScore 1072.FlipColumnsForMaximumNumberofEqualRows 1109.CorporateFlightBookings 1523.CountOddNumbersinanIntervalRange 1590.MakeSumDivisiblebyP 1854.MaximumPopulationYear 2017.GridGame 2055.PlatesBetweenCandles 2132.StampingtheGrid 2245.MaximumTrailingZerosinaCorneredPath  2256.MinimumAverageDifference 2270.NumberofWaystoSplitArray 2271.MaximumWhiteTilesCoveredbyaCarpet 2321.MaximumScoreOfSplicedArray 2348.NumberofZero-FilledSubarrays 2406.DivideIntervalsIntoMinimumNumberofGroups 2488.CountSubarraysWithMedianK
+	rm -f 798.SmallestRotationwithHighestScore 1072.FlipColumnsForMaximumNumberofEqualRows 1109.CorporateFlightBookings 1523.CountOddNumbersinanIntervalRange 1590.MakeSumDivisiblebyP 1854.MaximumPopulationYear 2017.GridGame 2055.PlatesBetweenCandles 2132.StampingtheGrid 2245.MaximumTrailingZerosinaCorneredPath  2256.MinimumAverageDifference 2270.NumberofWaystoSplitArray 2271.MaximumWhiteTilesCoveredbyaCarpet 2321.MaximumScoreOfSplicedArray 2348.NumberofZero-FilledSubarrays 2406.DivideIntervalsIntoMinimumNumberofGroups 2488.CountSubarraysWithMedianK 2574.LeftandRightSumDifferences

@@ -1,4 +1,8 @@
-ex:1535.FindtheWinnerofanArrayGame 1536.MinimumSwapstoArrangeaBinaryGrid 1551.MinimumOperationstoMakeArrayEqual 1557.MinimumNumberofVerticestoReachAllNodes 1578.MinimumTimetoMakeRopeColorful 1642.FurthestBuildingYouCanReach 1686.StoneGameVI 2211.CountCollisionsonaRoad 2126.DestroyingAsteroids 2170.MinimumOperationstoMaketheArrayAlternating 2207.MaximizeNumberofSubsequencesinaString 2216.MinimumDeletionstoMakeArrayBeautiful 2242.MaximumScoreofaNodeSequence 2259.RemoveDigitFromNumbertoMaximizeResult
+ex:757.SetIntersectionSizeAtLeastTwo 857.MinimumCosttoHireKWorkers 1535.FindtheWinnerofanArrayGame 1536.MinimumSwapstoArrangeaBinaryGrid 1551.MinimumOperationstoMakeArrayEqual 1557.MinimumNumberofVerticestoReachAllNodes 1578.MinimumTimetoMakeRopeColorful 1642.FurthestBuildingYouCanReach 1686.StoneGameVI 2211.CountCollisionsonaRoad 2126.DestroyingAsteroids 2170.MinimumOperationstoMaketheArrayAlternating 2207.MaximizeNumberofSubsequencesinaString 2216.MinimumDeletionstoMakeArrayBeautiful 2242.MaximumScoreofaNodeSequence 2259.RemoveDigitFromNumbertoMaximizeResult 2412.MinimumMoneyRequiredBeforeTransactions 2567.MinimumScorebyChangingTwoElements 2568.MinimumImpossibleOR  2571.MinimumOperationstoReduceanIntegerto0
+757.SetIntersectionSizeAtLeastTwo:757.SetIntersectionSizeAtLeastTwo.cc
+	g++ -Wall -g $^ -o $@
+857.MinimumCosttoHireKWorkers:857.MinimumCosttoHireKWorkers.cc
+	g++ -Wall -g $^ -o $@
 1535.FindtheWinnerofanArrayGame:1535.FindtheWinnerofanArrayGame.cc
 	g++ -Wall -g $^ -o $@
 1536.MinimumSwapstoArrangeaBinaryGrid:1536.MinimumSwapstoArrangeaBinaryGrid.cc
@@ -27,5 +31,13 @@ ex:1535.FindtheWinnerofanArrayGame 1536.MinimumSwapstoArrangeaBinaryGrid 1551.Mi
 	g++ -Wall -g $^ -o $@
 2259.RemoveDigitFromNumbertoMaximizeResult:2259.RemoveDigitFromNumbertoMaximizeResult.cc
 	g++ -Wall -g $^ -o $@
+2412.MinimumMoneyRequiredBeforeTransactions:2412.MinimumMoneyRequiredBeforeTransactions.cc
+	g++ -Wall -g $^ -o $@
+2567.MinimumScorebyChangingTwoElements:2567.MinimumScorebyChangingTwoElements.cc
+	g++ -Wall -g $^ -o $@
+2568.MinimumImpossibleOR:2568.MinimumImpossibleOR.cc
+	g++ -Wall -g $^ -o $@
+2571.MinimumOperationstoReduceanIntegerto0:2571.MinimumOperationstoReduceanIntegerto0.cc
+	g++ -Wall -g $^ -o $@
 clean:
-	rm -f 1535.FindtheWinnerofanArrayGame 1536.MinimumSwapstoArrangeaBinaryGrid 1551.MinimumOperationstoMakeArrayEqual 1557.MinimumNumberofVerticestoReachAllNodes 1642.FurthestBuildingYouCanReach 1686.StoneGameVI 2211.CountCollisionsonaRoad 2126.DestroyingAsteroids 2170.MinimumOperationstoMaketheArrayAlternating 2207.MaximizeNumberofSubsequencesinaString 2216.MinimumDeletionstoMakeArrayBeautiful 2242.MaximumScoreofaNodeSequence 2259.RemoveDigitFromNumbertoMaximizeResult
+	rm -f 757.SetIntersectionSizeAtLeastTwo 857.MinimumCosttoHireKWorkers 1535.FindtheWinnerofanArrayGame 1536.MinimumSwapstoArrangeaBinaryGrid 1551.MinimumOperationstoMakeArrayEqual 1557.MinimumNumberofVerticestoReachAllNodes 1642.FurthestBuildingYouCanReach 1686.StoneGameVI 2211.CountCollisionsonaRoad 2126.DestroyingAsteroids 2170.MinimumOperationstoMaketheArrayAlternating 2207.MaximizeNumberofSubsequencesinaString 2216.MinimumDeletionstoMakeArrayBeautiful 2242.MaximumScoreofaNodeSequence 2259.RemoveDigitFromNumbertoMaximizeResult 2412.MinimumMoneyRequiredBeforeTransactions 2567.MinimumScorebyChangingTwoElements 2568.MinimumImpossibleOR 2571.MinimumOperationstoReduceanIntegerto0
