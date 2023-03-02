@@ -1,4 +1,4 @@
-ex:757.SetIntersectionSizeAtLeastTwo 857.MinimumCosttoHireKWorkers 1535.FindtheWinnerofanArrayGame 1536.MinimumSwapstoArrangeaBinaryGrid 1551.MinimumOperationstoMakeArrayEqual 1557.MinimumNumberofVerticestoReachAllNodes 1578.MinimumTimetoMakeRopeColorful 1642.FurthestBuildingYouCanReach 1686.StoneGameVI 2211.CountCollisionsonaRoad 2126.DestroyingAsteroids 2170.MinimumOperationstoMaketheArrayAlternating 2207.MaximizeNumberofSubsequencesinaString 2216.MinimumDeletionstoMakeArrayBeautiful 2242.MaximumScoreofaNodeSequence 2259.RemoveDigitFromNumbertoMaximizeResult 2412.MinimumMoneyRequiredBeforeTransactions 2567.MinimumScorebyChangingTwoElements 2568.MinimumImpossibleOR  2571.MinimumOperationstoReduceanIntegerto0
+ex:757.SetIntersectionSizeAtLeastTwo 857.MinimumCosttoHireKWorkers 1535.FindtheWinnerofanArrayGame 1536.MinimumSwapstoArrangeaBinaryGrid 1551.MinimumOperationstoMakeArrayEqual 1557.MinimumNumberofVerticestoReachAllNodes 1578.MinimumTimetoMakeRopeColorful 1616.SplitTwoStringstoMakePalindrome 1642.FurthestBuildingYouCanReach 1686.StoneGameVI 1864.MinimumNumberofSwapstoMaketheBinaryStringAlternating 2211.CountCollisionsonaRoad 2126.DestroyingAsteroids 2170.MinimumOperationstoMaketheArrayAlternating 2207.MaximizeNumberofSubsequencesinaString 2216.MinimumDeletionstoMakeArrayBeautiful 2242.MaximumScoreofaNodeSequence 2259.RemoveDigitFromNumbertoMaximizeResult 2412.MinimumMoneyRequiredBeforeTransactions 2567.MinimumScorebyChangingTwoElements 2568.MinimumImpossibleOR  2571.MinimumOperationstoReduceanIntegerto0
 757.SetIntersectionSizeAtLeastTwo:757.SetIntersectionSizeAtLeastTwo.cc
 	g++ -Wall -g $^ -o $@
 857.MinimumCosttoHireKWorkers:857.MinimumCosttoHireKWorkers.cc
@@ -13,9 +13,13 @@ ex:757.SetIntersectionSizeAtLeastTwo 857.MinimumCosttoHireKWorkers 1535.FindtheW
 	g++ -Wall -g $^ -o $@
 1578.MinimumTimetoMakeRopeColorful:1578.MinimumTimetoMakeRopeColorful.cc
 	g++ -Wall -g $^ -o $@
+1616.SplitTwoStringstoMakePalindrome:1616.SplitTwoStringstoMakePalindrome.cc
+	g++ -Wall -g $^ -o $@
 1642.FurthestBuildingYouCanReach:1642.FurthestBuildingYouCanReach.cc
 	g++ -Wall -g $^ -o $@
 1686.StoneGameVI:1686.StoneGameVI.cc
+	g++ -Wall -g $^ -o $@
+1864.MinimumNumberofSwapstoMaketheBinaryStringAlternating:1864.MinimumNumberofSwapstoMaketheBinaryStringAlternating.cc
 	g++ -Wall -g $^ -o $@
 2211.CountCollisionsonaRoad:2211.CountCollisionsonaRoad.cc
 	g++ -Wall -g $^ -o $@
@@ -40,4 +44,5 @@ ex:757.SetIntersectionSizeAtLeastTwo 857.MinimumCosttoHireKWorkers 1535.FindtheW
 2571.MinimumOperationstoReduceanIntegerto0:2571.MinimumOperationstoReduceanIntegerto0.cc
 	g++ -Wall -g $^ -o $@
 clean:
-	rm -f 757.SetIntersectionSizeAtLeastTwo 857.MinimumCosttoHireKWorkers 1535.FindtheWinnerofanArrayGame 1536.MinimumSwapstoArrangeaBinaryGrid 1551.MinimumOperationstoMakeArrayEqual 1557.MinimumNumberofVerticestoReachAllNodes 1642.FurthestBuildingYouCanReach 1686.StoneGameVI 2211.CountCollisionsonaRoad 2126.DestroyingAsteroids 2170.MinimumOperationstoMaketheArrayAlternating 2207.MaximizeNumberofSubsequencesinaString 2216.MinimumDeletionstoMakeArrayBeautiful 2242.MaximumScoreofaNodeSequence 2259.RemoveDigitFromNumbertoMaximizeResult 2412.MinimumMoneyRequiredBeforeTransactions 2567.MinimumScorebyChangingTwoElements 2568.MinimumImpossibleOR 2571.MinimumOperationstoReduceanIntegerto0
+	rm -f 757.SetIntersectionSizeAtLeastTwo 857.MinimumCosttoHireKWorkers 1535.FindtheWinnerofanArrayGame 1536.MinimumSwapstoArrangeaBinaryGrid 1551.MinimumOperationstoMakeArrayEqual 1557.MinimumNumberofVerticestoReachAllNodes 1616.SplitTwoStringstoMakePalindrome 1642.FurthestBuildingYouCanReach 1686.StoneGameVI 1864.MinimumNumberofSwapstoMaketheBinaryStringAlternating  2211.CountCollisionsonaRoad 2126.DestroyingAsteroids 2170.MinimumOperationstoMaketheArrayAlternating 2207.MaximizeNumberofSubsequencesinaString 2216.MinimumDeletionstoMakeArrayBeautiful 2242.MaximumScoreofaNodeSequence 2259.RemoveDigitFromNumbertoMaximizeResult 2412.MinimumMoneyRequiredBeforeTransactions 2567.MinimumScorebyChangingTwoElements 2568.MinimumImpossibleOR 2571.MinimumOperationstoReduceanIntegerto0
+
