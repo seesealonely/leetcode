@@ -48,7 +48,7 @@ ListNode *buildList(bool in)
 	return head;
 }
 
- TreeNode *buildTree()
+TreeNode *buildTree()
 {
 	int input=10;
 	cin>>input;
@@ -70,8 +70,8 @@ void  show(TreeNode *root)
 }
 void show(vector<TreeNode *> res)
 {
-for(unsigned int i=0;i<res.size();++i)
-	show(res[i]),cout<<endl;
+	for(unsigned int i=0;i<res.size();++i)
+		show(res[i]),cout<<endl;
 }
 void show(ListNode *head)
 {
@@ -111,8 +111,8 @@ void show(vector<string> v)
 void show(vector<vector<string> > v)
 {
 	for(unsigned int i=0;i<v.size();++i)
-	for(unsigned int j=0;j<v.size();++j)
-		cout<<v[i][j]<<"　";
+		for(unsigned int j=0;j<v.size();++j)
+			cout<<v[i][j]<<"　";
 	cout<<endl;
 }
 void show(vector<vector<int> > v)
@@ -121,10 +121,10 @@ void show(vector<vector<int> > v)
 	{
 		for(unsigned int j=0;j<v[i].size();++j)
 			cout<<v[i][j]<<"　";
-	cout<<endl;
+		cout<<endl;
 	}
 }
- TreeLinkNode *buildTree(bool i)
+TreeLinkNode *buildTree(bool i)
 {
 	int input=10;
 	cin>>input;
@@ -137,7 +137,7 @@ void show(vector<vector<int> > v)
 	}	
 	return input>=9?NULL:root;
 }
- void  show(TreeLinkNode *root)
+void  show(TreeLinkNode *root)
 {
 	if(root) cout<<root->val<<" ";
 	else return;
@@ -147,14 +147,30 @@ void show(vector<vector<int> > v)
 void show(vector<char> s)
 {
 	for(int i=0;i<s.size();i++)
-	cout<<s[i];
+		cout<<s[i];
 	cout<<endl;
 }
 
+void show(vector<ll> s)
+{
+	for(int i=0;i<s.size();i++)
+		cout<<s[i]<<" ";
+	cout<<endl;
+}
+void show(vector<vector<ll>>  v)
+{
+	for(int i=0;i<v.size();i++)
+	{
+		for(int j=0;j<v[i].size();j++)
+			cout<<v[i][j]<<" ";
+		cout<<endl;
+	}
+	cout<<"###########"<<endl;
+}
 void show(vector<bool> s)
 {
 	for(int i=0;i<s.size();i++)
-	cout<<s[i]<<" ";
+		cout<<s[i]<<" ";
 	cout<<endl;
 }
 

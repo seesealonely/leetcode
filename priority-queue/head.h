@@ -24,6 +24,7 @@
 #include<unordered_map>
 #endif
 using namespace std;
+typedef long long ll;
 struct ListNode {
 	int val;
 	ListNode *next;
@@ -50,6 +51,8 @@ void show(ListNode *head);
 void show(vector<bool> v);
 void show(vector<int> v);
 void show(vector<double> v);
+void show(vector<ll> v);
+void show(vector<vector<ll>>  v);
 void show(vector<string> v);
 void show(vector<vector<string> > v);
 void show(vector<vector<int> > v);
