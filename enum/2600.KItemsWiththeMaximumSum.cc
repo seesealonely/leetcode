@@ -48,7 +48,7 @@ class Solution {
 		if(k<=numZeros)
 			return numOnes;
 
-		k-=numOnes;
+		k-=numZeros;
 		return numOnes-k;
 		}
 };
