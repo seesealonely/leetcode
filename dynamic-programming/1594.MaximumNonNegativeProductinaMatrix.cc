@@ -49,10 +49,51 @@ class Solution {
         vector<vector<ll>> mx(r,vector<ll>(c,0)),mn(r,vector<ll>(c,0));
 
         mx[0][0]=mn[0][0]=grid[0][0];
-        for(int i=1;i<=r;i++)
-            mx[i][0]=mn[i][0]=grid[i-1][0];
-        for(int i=1;i<=c;i++)
-            mx[0][i]=mn[0][i]=grid[0][i-1];
+        for(int i=0;i<r;i++)
+        for(int j=0;j<c;j++)
+		if(grid[i][j]==0)
+			mx[i][j]=mn[i][j]=0;
+		else if(grid[i][j]>0)
+		{
+			if(i>0&&j>0)
+			{
+				mx[i][j]=max(mx[i-1][j],mx[i][j-1])*grid[i][j];
+				mn[i][j]=min(mn[i-1][j],mn[i][j-1])*grid[i][j];
+			}
+			else if(i>0)
+			{
+				mx[i][j]=mx[i-1][j]*grid[i][j];
+				mn[i][j]=mn[i-1][j]*grid[i][j];
+			}
+			else if(j>0)
+			{
+				mx[i][j]=mx[i][j-1]*grid[i][j];
+				mn[i][j]=mn[i][j-1]*grid[i][j];
+			}
+		}
+		else 
+		{
+			if(i>0&&j>0)
+			{
+				mx[i][j]=min(mn[i-1][j],mn[i][j-1])*grid[i][j];
+				mn[i][j]=max(mx[i-1][j],mx[i][j-1])*grid[i][j];
+			}
+			else if(i>0)
+			{
+				mx[i][j]=mn[i-1][j]*grid[i][j];
+				mn[i][j]=mx[i-1][j]*grid[i][j];
+			}
+			else if(j>0)
+			{
+				mx[i][j]=mn[i][j-1]*grid[i][j];
+				mn[i][j]=mx[i][j-1]*grid[i][j];
+			}
+		}
+
+	if(mx[r-1][c-1]<0)
+		return -1;
+
+	return mx[r-1][c-1]%mod;
         }
 };
 
@@ -60,6 +101,11 @@ class Solution {
 int main() 
 {
     Solution s;
-//    s.maxProductPath();
+    vector<vector<int>> v={{-1,-2,-3},{-2,-3,-3},{-3,-3,-2}};
+    cout<<s.maxProductPath(v)<<endl;
+    v.clear();v={{1,-2,1},{1,-2,1},{3,-4,1}};
+    cout<<s.maxProductPath(v)<<endl;
+    v.clear();v={{1,3},{0,-4}};
+    cout<<s.maxProductPath(v)<<endl;
     return 0;
 }

@@ -1,4 +1,4 @@
-ex:lib.a 123.BestTimetoBuyandSellStockIII 188.BestTimetoBuyandSellStockIV 309.BestTimetoBuyandSellStockwithCooldown 375.GuessNumberHigherorLowerII 464.CanIWin 576.OutofBoundaryPaths 600.Non-negativeIntegerswithoutConsecutiveOnes 664.StrangePrinter 698.PartitiontoKEqualSumSubsets 764.LargestPlusSign 787.CheapestFlightsWithinKStops 790.DominoandTrominoTiling 837.New21Game 1027.LongestArithmeticSubsequence 1289.MinimumFallingPathSumII 1320.MinimumDistancetoTypeaWordUsingTwoFingers 1388.PizzaWith3nSlices 1473.PaintHouseIII 1477.FindTwoNon-overlappingSub-arraysEachWithTargetSum 1478.AllocateMailboxes 1510.StoneGameIV 1547.MinimumCosttoCutaStick 1563.StoneGameV 1567.MaximumLengthofSubarrayWithPositiveProduct 1594.MaximumNonNegativeProductinaMatrix 1621.NumberofSetsofKNon-OverlappingLineSegments 1626.BestTeamWithNoConflicts 1681.MinimumIncompatibility 1955.CountNumberofSpecialSubsequences 2054.TwoBestNon-OverlappingEvents 2218.MaximumValueofKCoinsFromPiles 2222.NumberofWaystoSelectBuildings 2240.NumberofWaystoBuyPensandPencils 2266.CountNumberofTexts  2304.MinimumPathCostinaGrid 2320.CountNumberofWaystoPlaceHouses  2327.NumberofPeopleAwareofaSecret 2572.CounttheNumberofSquare-FreeSubsets  2573.FindtheStringwithLCP
+ex:lib.a 123.BestTimetoBuyandSellStockIII 188.BestTimetoBuyandSellStockIV 309.BestTimetoBuyandSellStockwithCooldown 375.GuessNumberHigherorLowerII 464.CanIWin 576.OutofBoundaryPaths 600.Non-negativeIntegerswithoutConsecutiveOnes 664.StrangePrinter 698.PartitiontoKEqualSumSubsets 764.LargestPlusSign 787.CheapestFlightsWithinKStops 790.DominoandTrominoTiling 837.New21Game 940.DistinctSubsequencesII 956.TallestBillboard 1027.LongestArithmeticSubsequence 1187.MakeArrayStrictlyIncreasing 1289.MinimumFallingPathSumII 1320.MinimumDistancetoTypeaWordUsingTwoFingers 1388.PizzaWith3nSlices 1473.PaintHouseIII 1477.FindTwoNon-overlappingSub-arraysEachWithTargetSum 1478.AllocateMailboxes 1510.StoneGameIV 1547.MinimumCosttoCutaStick 1563.StoneGameV 1567.MaximumLengthofSubarrayWithPositiveProduct 1594.MaximumNonNegativeProductinaMatrix 1621.NumberofSetsofKNon-OverlappingLineSegments 1626.BestTeamWithNoConflicts 1751.MaximumNumberofEventsThatCanBeAttendedII 1955.CountNumberofSpecialSubsequences 1959.MinimumTotalSpaceWastedWithKResizingOperations 2054.TwoBestNon-OverlappingEvents 2218.MaximumValueofKCoinsFromPiles 2222.NumberofWaystoSelectBuildings 2240.NumberofWaystoBuyPensandPencils 2266.CountNumberofTexts  2304.MinimumPathCostinaGrid 2320.CountNumberofWaystoPlaceHouses  2327.NumberofPeopleAwareofaSecret 2572.CounttheNumberofSquare-FreeSubsets  2585.NumberofWaystoEarnPoints
 lib.a:head.o
 	ar -crv $@ $<
 head.o:head.cc
@@ -28,8 +28,14 @@ head.o:head.cc
 	g++ -Wall -g $^ -o $@
 837.New21Game:837.New21Game.cc
 	g++ -Wall -g $^ -o $@
+940.DistinctSubsequencesII:940.DistinctSubsequencesII.cc
+	g++ -Wall -g $^ -o $@
+956.TallestBillboard:956.TallestBillboard.cc
+	g++ -Wall -g $^ -o $@
 1027.LongestArithmeticSubsequence:1027.LongestArithmeticSubsequence.cc
 	g++ -Wall -g -std=c++11  $^ -o $@
+1187.MakeArrayStrictlyIncreasing:1187.MakeArrayStrictlyIncreasing.cc
+	g++ -Wall -g $^ -o $@
 1289.MinimumFallingPathSumII:1289.MinimumFallingPathSumII.cc
 	g++ -Wall -g $^ -o $@
 1320.MinimumDistancetoTypeaWordUsingTwoFingers:1320.MinimumDistancetoTypeaWordUsingTwoFingers.cc
@@ -58,7 +64,11 @@ head.o:head.cc
 	g++ -Wall -g $^ -o $@
 1681.MinimumIncompatibilit:1681.MinimumIncompatibilit.cc
 	g++ -Wall -g $^ -o $@
+1751.MaximumNumberofEventsThatCanBeAttendedII:1751.MaximumNumberofEventsThatCanBeAttendedII.cc
+	g++ -Wall -g $^ -o $@
 1955.CountNumberofSpecialSubsequences:1955.CountNumberofSpecialSubsequences.cc
+	g++ -Wall -g $^ -o $@
+1959.MinimumTotalSpaceWastedWithKResizingOperations:1959.MinimumTotalSpaceWastedWithKResizingOperations.cc
 	g++ -Wall -g $^ -o $@
 2054.TwoBestNon-OverlappingEvents:2054.TwoBestNon-OverlappingEvents.cc
 	g++ -Wall -g $^ -o $@
@@ -80,5 +90,7 @@ head.o:head.cc
 	g++ -Wall -g $^ -o $@
 2573.FindtheStringwithLCP:2573.FindtheStringwithLCP.cc
 	g++ -Wall -g $^ -o $@
+2585.NumberofWaystoEarnPoints:2585.NumberofWaystoEarnPoints.cc
+	g++ -Wall -g $^ -o $@
 clean:
-	rm -f 123.BestTimetoBuyandSellStockIII 188.BestTimetoBuyandSellStockIV 309.BestTimetoBuyandSellStockwithCooldown 375.GuessNumberHigherorLowerII 464.CanIWin 576.OutofBoundaryPaths 600.Non-negativeIntegerswithoutConsecutiveOnes 664.StrangePrinter 698.PartitiontoKEqualSumSubsets 764.LargestPlusSign 787.CheapestFlightsWithinKStops 790.DominoandTrominoTiling 837.New21Game 1027.LongestArithmeticSubsequence 1289.MinimumFallingPathSumII 1320.MinimumDistancetoTypeaWordUsingTwoFingers 1388.PizzaWith3nSlices 1473.PaintHouseIII 1477.FindTwoNon-overlappingSub-arraysEachWithTargetSum 1478.AllocateMailboxes 1510.StoneGameIV 1547.MinimumCosttoCutaStick 1563.StoneGameV 1567.MaximumLengthofSubarrayWithPositiveProduct 1594.MaximumNonNegativeProductinaMatrix 1621.NumberofSetsofKNon-OverlappingLineSegments 1681.MinimumIncompatibilit 1955.CountNumberofSpecialSubsequences 2054.TwoBestNon-OverlappingEvents 2218.MaximumValueofKCoinsFromPiles 2222.NumberofWaystoSelectBuildings 2240.NumberofWaystoBuyPensandPencils 2266.CountNumberofTexts 2304.MinimumPathCostinaGrid 2320.CountNumberofWaystoPlaceHouses 2327.NumberofPeopleAwareofaSecret 2572.CounttheNumberofSquare-FreeSubsets 2573.FindtheStringwithLCP
+	rm -f 123.BestTimetoBuyandSellStockIII 188.BestTimetoBuyandSellStockIV 309.BestTimetoBuyandSellStockwithCooldown 375.GuessNumberHigherorLowerII 464.CanIWin 576.OutofBoundaryPaths 600.Non-negativeIntegerswithoutConsecutiveOnes 664.StrangePrinter 698.PartitiontoKEqualSumSubsets 764.LargestPlusSign 787.CheapestFlightsWithinKStops 790.DominoandTrominoTiling 837.New21Game 940.DistinctSubsequencesII 956.TallestBillboard 1027.LongestArithmeticSubsequence 1187.MakeArrayStrictlyIncreasing 1289.MinimumFallingPathSumII 1320.MinimumDistancetoTypeaWordUsingTwoFingers 1388.PizzaWith3nSlices 1473.PaintHouseIII 1477.FindTwoNon-overlappingSub-arraysEachWithTargetSum 1478.AllocateMailboxes 1510.StoneGameIV 1547.MinimumCosttoCutaStick 1563.StoneGameV 1567.MaximumLengthofSubarrayWithPositiveProduct 1594.MaximumNonNegativeProductinaMatrix 1621.NumberofSetsofKNon-OverlappingLineSegments 1681.MinimumIncompatibilit 1751.MaximumNumberofEventsThatCanBeAttendedII 1955.CountNumberofSpecialSubsequences 1959.MinimumTotalSpaceWastedWithKResizingOperations 2054.TwoBestNon-OverlappingEvents 2218.MaximumValueofKCoinsFromPiles 2222.NumberofWaystoSelectBuildings 2240.NumberofWaystoBuyPensandPencils 2266.CountNumberofTexts 2304.MinimumPathCostinaGrid 2320.CountNumberofWaystoPlaceHouses 2327.NumberofPeopleAwareofaSecret 2572.CounttheNumberofSquare-FreeSubsets 2573.FindtheStringwithLCP 2585.NumberofWaystoEarnPoints
