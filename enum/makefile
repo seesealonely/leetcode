@@ -1,7 +1,14 @@
-ex:840.MagicSquaresInGrid 2515.ShortestDistancetoTargetStringinaCircularArray 2520.CounttheDigitsThatDivideaNumber 2535.DifferenceBetweenElementSumandDigitSumofanArray 2554.MaximumNumberofIntegerstoChooseFromaRangeI 2566.MaximumDifferencebyRemappingaDigit 2578.SplitWithMinimumSum 2586.CounttheNumberofVowelStringsinRange 2600.KItemsWiththeMaximumSum
+ex:840.MagicSquaresInGrid 955.DeleteColumnstoMakeSortedII 1620.CoordinateWithMaximumNetworkQuality 2515.ShortestDistancetoTargetStringinaCircularArray 2520.CounttheDigitsThatDivideaNumber 2535.DifferenceBetweenElementSumandDigitSumofanArray 2554.MaximumNumberofIntegerstoChooseFromaRangeI 2566.MaximumDifferencebyRemappingaDigit 2578.SplitWithMinimumSum 2586.CounttheNumberofVowelStringsinRange 2600.KItemsWiththeMaximumSum 2606.FindtheSubstringWithMaximumCost 
+lib.a:head.o
+	ar -crv $@ $<
+head.o:head.cc
 218.TheSkylineProblem:218.TheSkylineProblem.cc lib.a
 	g++ -Wall -g $^ -o $@
 840.MagicSquaresInGrid:840.MagicSquaresInGrid.cc
+	g++ -Wall -g $^ -o $@
+955.DeleteColumnstoMakeSortedII:955.DeleteColumnstoMakeSortedII.cc
+	g++ -Wall -g $^ -o $@
+1620.CoordinateWithMaximumNetworkQuality:1620.CoordinateWithMaximumNetworkQuality.cc lib.a
 	g++ -Wall -g $^ -o $@
 1846.MaximumElementAfterDecreasingandRearranging:1846.MaximumElementAfterDecreasingandRearranging.cc
 	g++ -Wall -g $^ -o $@
@@ -25,5 +32,7 @@ ex:840.MagicSquaresInGrid 2515.ShortestDistancetoTargetStringinaCircularArray 25
 	g++ -Wall -g $^ -o $@
 2600.KItemsWiththeMaximumSum:2600.KItemsWiththeMaximumSum.cc
 	g++ -Wall -g $^ -o $@
+2606.FindtheSubstringWithMaximumCost:2606.FindtheSubstringWithMaximumCost.cc
+	g++ -Wall -g $^ -o $@
 clean:
-	rm -f 218.TheSkylineProblem 840.MagicSquaresInGrid 2515.ShortestDistancetoTargetStringinaCircularArray 2520.CounttheDigitsThatDivideaNumber 2535.DifferenceBetweenElementSumandDigitSumofanArray 2552.CountIncreasingQuadruplets 2553.SeparatetheDigitsinanArray 2554.MaximumNumberofIntegerstoChooseFromaRangeI 2566.MaximumDifferencebyRemappingaDigit 2578.SplitWithMinimumSum 2586.CounttheNumberofVowelStringsinRange 2600.KItemsWiththeMaximumSum
+	rm -f 218.TheSkylineProblem 840.MagicSquaresInGrid 955.DeleteColumnstoMakeSortedII 1620.CoordinateWithMaximumNetworkQuality 2515.ShortestDistancetoTargetStringinaCircularArray 2520.CounttheDigitsThatDivideaNumber 2535.DifferenceBetweenElementSumandDigitSumofanArray 2552.CountIncreasingQuadruplets 2553.SeparatetheDigitsinanArray 2554.MaximumNumberofIntegerstoChooseFromaRangeI 2566.MaximumDifferencebyRemappingaDigit 2578.SplitWithMinimumSum 2586.CounttheNumberofVowelStringsinRange 2600.KItemsWiththeMaximumSum 2606.FindtheSubstringWithMaximumCost 
