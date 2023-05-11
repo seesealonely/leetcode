@@ -1,0 +1,135 @@
+/*
+   Alice and Bob have an undirected graph of n nodes and three types of edges:
+
+   Type 1: Can be traversed by Alice only.
+   Type 2: Can be traversed by Bob only.
+   Type 3: Can be traversed by both Alice and Bob.
+
+   Given an array edges where edges[i] = [typei, ui, vi] represents a bidirectional edge of type typei between nodes ui and vi, find the maximum number of edges you can remove so that after removing the edges, the graph can still be fully traversed by both Alice and Bob. The graph is fully traversed by Alice and Bob if starting from any node, they can reach all other nodes.
+
+   Return the maximum number of edges you can remove, or return -1 if Alice and Bob cannot fully traverse the graph.
+
+
+
+   Example 1:
+
+Input: n = 4, edges = [[3,1,2],[3,2,3],[1,1,3],[1,2,4],[1,1,2],[2,3,4]]
+Output: 2
+Explanation: If we remove the 2 edges [1,1,2] and [1,1,3]. The graph will still be fully traversable by Alice and Bob. Removing any additional edge will not make it so. So the maximum number of edges we can remove is 2.
+
+Example 2:
+
+Input: n = 4, edges = [[3,1,2],[3,2,3],[1,1,4],[2,1,4]]
+Output: 0
+Explanation: Notice that removing any edge will not make the graph fully traversable by Alice and Bob.
+
+Example 3:
+
+Input: n = 4, edges = [[3,2,3],[1,1,2],[2,3,4]]
+Output: -1
+Explanation: In the current graph, Alice cannot reach node 4 from the other nodes. Likewise, Bob cannot reach 1. Therefore it's impossible to make the graph fully traversable.
+
+
+
+
+
+Constraints:
+
+1 <= n <= 105
+1 <= edges.length <= min(105, 3 * n * (n - 1) / 2)
+edges[i].length == 3
+1 <= typei <= 3
+1 <= ui < vi <= n
+All tuples (typei, ui, vi) are distinct.
+
+*/
+
+
+#include"head.h"
+class uf{
+public:
+	vector<int> p,size;
+	uf(int n)
+	{
+		size.resize(n,1);
+		p.resize(n);
+		for(int i=0;i<n;i++)
+			p[i]=i;
+	}
+	int find(int x)
+	{
+		return x==p[x]?p[x]:find(p[x]);
+	}
+	void merge(int x,int y)
+	{
+		int px=find(x),py=find(y);
+
+		if(px==py) return ;
+
+		if(size[px]<size[py])
+		{
+			p[px]=py;
+			size[py]+=size[px];
+		}
+		else
+		{
+			p[py]=px;
+			size[px]+=size[py];
+		}
+	}
+};
+class Solution {
+	public:
+		int maxNumEdgesToRemove(int n, vector<vector<int>>& edges) {
+		uf a(n),b(n);
+
+		int res=0;
+		const int m=edges.size();
+		for(int i=0;i<m;i++)
+		{
+			int x=edges[i][1]-1,y=edges[i][2]-1,z=edges[i][0];
+
+			if(z!=3) continue;
+
+			if(z==3)
+			{
+				if(a.find(x)!=a.find(y)||b.find(x)!=b.find(y))
+					a.merge(x,y),b.merge(x,y);
+				else res++;
+			}
+		}
+
+		for(int i=0;i<m;i++)
+		{
+			int x=edges[i][1]-1,y=edges[i][2]-1,z=edges[i][0];
+
+			if(z==1)
+			{
+				if(a.find(x)!=a.find(y)) a.merge(x,y);
+				else res++;
+			}
+			else if(z==2)
+			{
+				if(b.find(x)!=b.find(y)) b.merge(x,y);
+				else res++;
+			}
+		}
+
+		if(a.size[a.find(0)]!=n||b.size[b.find(0)]!=n)
+			return -1;
+		return res;
+		}
+};
+
+
+int main() 
+{
+	Solution s;
+	vector<vector<int>> edges = {{3,1,2},{3,2,3},{1,1,3},{1,2,4},{1,1,2},{2,3,4}};
+	cout<<s.maxNumEdgesToRemove(4,edges)<<endl;
+	edges.clear();edges={{3,1,2},{3,2,3},{1,1,4},{2,1,4}};
+	cout<<s.maxNumEdgesToRemove(4,edges)<<endl;
+	edges.clear();edges={{3,2,3},{1,1,2},{2,3,4}};
+	cout<<s.maxNumEdgesToRemove(4,edges)<<endl;
+	return 0;
+}
