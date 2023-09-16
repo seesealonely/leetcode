@@ -51,11 +51,11 @@ Constraints:
 class Solution {
 	public:
 		long long minimumPossibleSum(int n, int target) {
-		const long long m=target/2;
-	
-		if(m>=n)
-			return (long long) n*(n+1)/2;
-		return m*(m+1)/2+(target+target+n-m-1)*(n-m)/2;
+		typedef long long ll;
+		ll m=min(n,target/2);
+
+        return (m * (m + 1) + (n - m - 1 + target * 2) * (n - m)) / 2 % 1000000007;
+
 		}
 };
 
