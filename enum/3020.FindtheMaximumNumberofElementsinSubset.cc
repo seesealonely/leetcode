@@ -49,7 +49,7 @@ class Solution {
 			long long x=it->first;
 			for(;cnt.find(x)!=cnt.end()&&cnt[x]>=2;x*=x)
 				res+=2;
-			res=max(res,cur+(cnt[x]?1:-1));
+			res=max(res,cur+(cnt.find(x)!=cnt.end()?1:-1));
 		}
 		return res;
 		}
