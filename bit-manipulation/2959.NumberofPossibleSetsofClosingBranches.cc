@@ -112,6 +112,7 @@ class Solution {
 					if((s>>j)&1&&f[i][j]>maxDistance)
 						return false;
 			}
+
 			return true;
 		}
 };
